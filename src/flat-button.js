@@ -11,6 +11,10 @@ class FlatButton extends Component {
     this.shouldComponentUpdate = PureRenderMixin.shouldComponentUpdate.bind(this);
   }
 
+  static garvita = {
+    foo: 123
+  }
+
   render() {
     const { className, color, active, ...props } = this.props;
     const fullClassName = classnames(className, 'flat-btn', `flat-btn-${color}`, {
